@@ -60,6 +60,14 @@ In the case of macthing an email: `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6
 -- `([a-z\.]{2,6})`- third group in our regex code that would match the domain such as .com.
   
 ### Bracket Expressions
+- A bracket expression or an expression enclosed in square brackets [], is regex component that shall match a specific set of single characters, in addition to or may match a specific set of multi-character collating elements, based on the non-empty set of list expressions contained in the bracket expression.
+- In case of matching an email address:`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+-- `[a-z0-9_\.-]`- matches any letter from `a-z` and is case senstive such as lowercase. It
+    also matches numerical characters from `0-9` in adddition to characters such as `_`, `-` ,
+    `.`
+-- `[\da-z\.-]`- matches any numerical characters from `0-9` in adddition to characters such as
+      a-z which would be case senstive, and characters `.` and `-`.
+-- `[a-z\.]`- matches any character a-z which would be case senstive and a character `.`
 
 ### Greedy and Lazy Match
 
